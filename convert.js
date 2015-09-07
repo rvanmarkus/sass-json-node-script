@@ -6,7 +6,7 @@ const test = /\$(.*)\s*:\s*(.*);/g;
 function convertSassToJson(sass) {
     let output = {};
     let match = test.exec(sass);
-    while(match != null){
+    while(match){
         output[match[1]] = match[2];
         match = test.exec(sass);
     }
